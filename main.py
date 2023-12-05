@@ -6,12 +6,18 @@ app = FastAPI()
 
 @app.get('/')
 async def f_index():
-    return {'message': 'Hello!', 'keyroot': 'Привет!!!'}
+    return 'Кашкаров Илья Игоревич'
 
 
 @app.get('/tools')
 async def f_indexT():
-    return {'message': 'Tools', 'key': 'Привет'}
+    return '+79836083013'
 
-if __name__=='__main__':
-    uvicorn.run(app='main:app', host='127.0.0.1', port=3000)
+
+@app.get('/users')
+async def f_indexT():
+    return 'Нету'
+
+
+#if __name__ == '__main__':
+#    uvicorn.run(app='main:app', host='127.0.0.1', port=3000)
